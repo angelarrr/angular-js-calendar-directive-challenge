@@ -13,8 +13,7 @@
 	<option value="11">December</option>
 </select>
 
-<select name="year" class="year" ng-model="year" ng-change="updateCal()">
-	<option value="2014">2014</option>
+<select name="year" class="year" ng-model="year" ng-options="year for year in years" ng-change="updateCal()">
 	<option value="2015">2015</option>
 </select>
 
@@ -26,7 +25,7 @@
 	<div class="day ofweek">Thursday</div>
 	<div class="day ofweek">Friday</div>
 	<div class="day ofweek">Saturday</div>
-	<div class="day ofweek" ng-repeat="day in range.days">
+	<div class="day {{day.dayClass}}" ng-repeat="day in range.days">
 		<span>{{ day.day }}</span>
 	</div>
 </div>

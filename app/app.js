@@ -24,12 +24,20 @@ angular.module('calendarDemoApp', [])
 				// generate days that should be displayed for given month
 				$scope.getCal = function(year, month){
 					$scope.range = CalendarRange.getMonthlyRange(new Date(year, month));
+					$scope.range.days.forEach(addColor);
 				};
 
 				// function to update calendar on select
 				$scope.updateCal = function(){
 					currMonth = $scope.month;
 					$scope.getCal($scope.year, $scope.month);
+				};
+
+				// add color class to last and next month days
+				function addColor(elm){
+					if (elm.month < currMonth || elm.month > currMonth){
+						elm.dayClass = 'otherMonth';
+					}
 				};
 
 				// load calendar
