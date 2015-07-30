@@ -1,3 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Helvetica', sans-serif;
+}
+
+select {
+	border: 0;
+	font-size: 1em;
+	background-color: #acfbac;
+}
+
+nav {
+	text-align: center;
+	padding: 2em;
+	float: right;
+	width: 50%;
+}
+
 .otherMonth {
-	background-color: LightGray;
+	background-color: #e4e4e4;
+}
+
+.calendar {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	clear: right;
+}
+
+.weekday-name {
+	height: 2em;
+	text-align: center;
+	border-top: solid 2px black;
+	border-bottom: solid 2px black;
+	width: 13%;
+	float: left;
+	position: relative;
+	padding-top: 0.25em;
+}
+
+.day {
+	width: 13%;
+	float: left;
+	position: relative;
+	height: 7em;
+	border: solid 1px #e4e4e4;
+	padding-top: 1em;
+	padding-left: 1em;
+}
+
+span {
+	padding-top: 1em;
 }

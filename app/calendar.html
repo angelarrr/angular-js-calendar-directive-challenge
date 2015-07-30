@@ -1,30 +1,35 @@
-<select name="month" class="month" ng-model="month" ng-change="updateCal()">
-	<option value="0">January</option>
-	<option value="1">February</option>
-	<option value="2">March</option>
-	<option value="3">April</option>
-	<option value="4">May</option>
-	<option value="5">June</option>
-	<option value="6">July</option>
-	<option value="7">August</option>
-	<option value="8">September</option>
-	<option value="9">October</option>
-	<option value="10">November</option>
-	<option value="11">December</option>
-</select>
+<nav>
+	<select name="month" class="month" ng-model="month" ng-change="updateCal()">
+		<option value="0">January</option>
+		<option value="1">February</option>
+		<option value="2">March</option>
+		<option value="3">April</option>
+		<option value="4">May</option>
+		<option value="5">June</option>
+		<option value="6">July</option>
+		<option value="7">August</option>
+		<option value="8">September</option>
+		<option value="9">October</option>
+		<option value="10">November</option>
+		<option value="11">December</option>
+	</select>
 
-<select name="year" class="year" ng-model="year" ng-options="year for year in years" ng-change="updateCal()">
-	<option value="2015">2015</option>
-</select>
+	<select name="year" class="year" ng-model="year" ng-options="year for year in years" ng-change="updateCal()">
+		<option value="2015">2015</option>
+	</select>
+</nav>
 
 <div class="calendar">
-	<div class="day ofweek">Sunday</div>
-	<div class="day ofweek">Monday</div>
-	<div class="day ofweek">Tuesday</div>
-	<div class="day ofweek">Wednesday</div>
-	<div class="day ofweek">Thursday</div>
-	<div class="day ofweek">Friday</div>
-	<div class="day ofweek">Saturday</div>
+	<div class="weekdays">
+		<div class="weekday-name">Sunday</div>
+		<div class="weekday-name">Monday</div>
+		<div class="weekday-name">Tuesday</div>
+		<div class="weekday-name">Wednesday</div>
+		<div class="weekday-name">Thursday</div>
+		<div class="weekday-name">Friday</div>
+		<div class="weekday-name">Saturday</div>
+	</div>
+
 	<div class="day {{day.dayClass}}" ng-repeat="day in range.days">
 		<span>{{ day.day }}</span>
 	</div>
