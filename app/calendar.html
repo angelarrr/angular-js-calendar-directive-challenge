@@ -1,24 +1,22 @@
-<form>
-	<select class="month">
-		<option value="0">January</option>
-		<option value="1">February</option>
-		<option value="2">March</option>
-		<option value="3">April</option>
-		<option value="4">May</option>
-		<option value="5">June</option>
-		<option value="6">July</option>
-		<option value="7">August</option>
-		<option value="8">September</option>
-		<option value="9">October</option>
-		<option value="10">November</option>
-		<option value="11">December</option>
-	</select>
+<select name="month" class="month" ng-model="month" ng-change="updateCal()">
+	<option value="0">January</option>
+	<option value="1">February</option>
+	<option value="2">March</option>
+	<option value="3">April</option>
+	<option value="4">May</option>
+	<option value="5">June</option>
+	<option value="6">July</option>
+	<option value="7">August</option>
+	<option value="8">September</option>
+	<option value="9">October</option>
+	<option value="10">November</option>
+	<option value="11">December</option>
+</select>
 
-	<select class="year">
-		<option value="2014">2014</option>
-		<option value="2015">2015</option>
-	</select>
-</form>
+<select name="year" class="year" ng-model="year" ng-change="updateCal()">
+	<option value="2014">2014</option>
+	<option value="2015">2015</option>
+</select>
 
 <div class="calendar">
 	<div class="day ofweek">Sunday</div>
@@ -27,5 +25,8 @@
 	<div class="day ofweek">Wednesday</div>
 	<div class="day ofweek">Thursday</div>
 	<div class="day ofweek">Friday</div>
-	<div class="day ofweek">Satday</div>
+	<div class="day ofweek">Saturday</div>
+	<div class="day ofweek" ng-repeat="day in range.days">
+		<span>{{ day.day }}</span>
+	</div>
 </div>
