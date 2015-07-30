@@ -19,5 +19,7 @@ describe('calendar', function(){
 	it('should render calendar element correctly', function(){
 		expect(element.find('select').length).toBe(2);
 		expect(element.find('.year option').length).toBe(41);
+		expect(element.find('.month option').length).toBe(12);
 	});
+
 });

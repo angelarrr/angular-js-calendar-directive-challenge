@@ -13,6 +13,7 @@ angular.module('calendarDemoApp', [])
 				// select show current month and year
 				$scope.month = currMonth;
 				$scope.year = currYear;
+				console.log($scope.month, $scope.year);
 
 				// populate yr select box for 20yrs in past/future
 				var years = [];
